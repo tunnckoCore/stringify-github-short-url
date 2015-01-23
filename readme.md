@@ -9,15 +9,59 @@ npm test
 ```
 
 
-## Usage
+## Related
+- [parse-github-short-urls][parse-github-short-urls]
+- [github-short-url-regex][github-short-url-regex]
+- [parse-github-short-url][parse-github-short-url]
+
+
+## API
 > For more use-cases see the [tests](./test.js)
+
+### [.stringifyGithubShortUrl](./index.js#L59)
+
+Stringify github short url object
+
+- `<obj>` **{Object}** object to stringify  
+- `returns` **{String}**
+
+**Example:**
 
 ```js
 var stringifyGithubShortUrl = require('stringify-github-short-url');
+stringifyGithubShortUrl({
+  user: 'tunnckoCore',
+  username: 'tunnckoCore',
+  org: 'tunnckoCore',
+  organization: 'tunnckoCore',
+  repo: 'glob2fp',
+  repository: 'glob2fp',
+  branch: 'master'
+  });
+//=> 'tunnckoCore/glob2fp#master'
+
+stringifyGithubShortUrl({
+  user: 'jonschlinkert',
+  username: 'jonschlinkert',
+  org: 'jonschlinkert',
+  organization: 'jonschlinkert',
+  repo: 'template',
+  repository: 'template',
+  branch: 'feature'
+  });
+//=> 'jonschlinkert/template#feature'
+
+stringifyGithubShortUrl({
+  user: 'visionmedia',
+  username: 'visionmedia',
+  org: 'visionmedia',
+  organization: 'visionmedia',
+  repo: 'mocha',
+  repository: 'mocha',
+  branch: ''
+  });
+//=> 'visionmedia/mocha'
 ```
-
-
-## API / CLI
 
 
 ## Author
@@ -60,3 +104,7 @@ Released under the [`MIT`][license-url] license.
 ***
 
 _Powered and automated by [kdf](https://github.com/tunnckoCore), January 23, 2015_
+
+[github-short-url-regex]: https://github.com/regexps/github-short-url-regex
+[parse-github-short-url]: https://github.com/tunnckoCore/parse-github-short-url
+[parse-github-short-urls]: https://github.com/tunnckoCore/parse-github-short-urls

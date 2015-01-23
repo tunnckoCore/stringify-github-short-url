@@ -10,6 +10,52 @@
 var fmt = require('util').format;
 var _NAME = 'stringify-github-short-url:';
 
+/**
+ * Stringify github short url object
+ *
+ * **Example:**
+ *
+ * ```js
+ * var stringifyGithubShortUrl = require('stringify-github-short-url');
+ * stringifyGithubShortUrl({
+ *   user: 'tunnckoCore',
+ *   username: 'tunnckoCore',
+ *   org: 'tunnckoCore',
+ *   organization: 'tunnckoCore',
+ *   repo: 'glob2fp',
+ *   repository: 'glob2fp',
+ *   branch: 'master'
+ * });
+ * //=> 'tunnckoCore/glob2fp#master'
+ *
+ * stringifyGithubShortUrl({
+ *   user: 'jonschlinkert',
+ *   username: 'jonschlinkert',
+ *   org: 'jonschlinkert',
+ *   organization: 'jonschlinkert',
+ *   repo: 'template',
+ *   repository: 'template',
+ *   branch: 'feature'
+ * });
+ * //=> 'jonschlinkert/template#feature'
+ *
+ * stringifyGithubShortUrl({
+ *   user: 'visionmedia',
+ *   username: 'visionmedia',
+ *   org: 'visionmedia',
+ *   organization: 'visionmedia',
+ *   repo: 'mocha',
+ *   repository: 'mocha',
+ *   branch: ''
+ * });
+ * //=> 'visionmedia/mocha'
+ * ```
+ *
+ * @name stringifyGithubShortUrl
+ * @param  {Object} `<obj>` object to stringify
+ * @return {String}
+ * @api public
+ */
 module.exports = function stringifyGithubShortUrl(obj) {
   if (!obj) {
     throw new Error('%s should have at least 1 arguments', _NAME);
@@ -35,6 +81,7 @@ module.exports = function stringifyGithubShortUrl(obj) {
  *
  * @param  {*} `val`
  * @return {String}
+ * @api private
  */
 function typeOf(val) {
   if (typeof val !== 'object') {
