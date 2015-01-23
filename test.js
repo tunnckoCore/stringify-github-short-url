@@ -24,6 +24,14 @@ describe('stringify-github-short-url:', function() {
       assert.throws(fixture, TypeError);
       done();
     });
+
+    it('TypeError when Array given', function(done) {
+      function fixture() {
+        stringify(['some string'])
+      }
+      assert.throws(fixture, TypeError);
+      done();
+    });
   });
 
   describe('should return empty string', function(done) {
