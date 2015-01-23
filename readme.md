@@ -1,4 +1,4 @@
-## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
+## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url]
 
 > Stringify github shorthand url object returned from `parse-github-short-url`
 
@@ -19,8 +19,7 @@ npm test
 > For more use-cases see the [tests](./test.js)
 
 ### [.stringifyGithubShortUrl](./index.js#L59)
-
-Stringify github short url object
+> Stringify github short url object
 
 - `<obj>` **{Object}** object to stringify  
 - `returns` **{String}**
@@ -37,7 +36,7 @@ stringifyGithubShortUrl({
   repo: 'glob2fp',
   repository: 'glob2fp',
   branch: 'master'
-  });
+});
 //=> 'tunnckoCore/glob2fp#master'
 
 stringifyGithubShortUrl({
@@ -48,7 +47,7 @@ stringifyGithubShortUrl({
   repo: 'template',
   repository: 'template',
   branch: 'feature'
-  });
+});
 //=> 'jonschlinkert/template#feature'
 
 stringifyGithubShortUrl({
@@ -59,7 +58,7 @@ stringifyGithubShortUrl({
   repo: 'mocha',
   repository: 'mocha',
   branch: ''
-  });
+});
 //=> 'visionmedia/mocha'
 ```
 
