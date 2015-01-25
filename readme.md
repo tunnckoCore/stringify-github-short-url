@@ -18,9 +18,10 @@ npm test
 
 
 ## API
-> For more use-cases see the [tests](./test.js)
+> For more use-cases see the [tests](./test.js)  
+> Also `.test` and `.validate` methods are exposed from [parse-github-short-url][parse-github-short-url]
 
-### [.stringifyGithubShortUrl](./index.js#L59)
+### [stringifyGithubShortUrl](./index.js#L70)
 > Stringify github short url object
 
 - `<obj>` **{Object}** object to stringify  
@@ -104,7 +105,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 23, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 25, 2015_
 
 [github-short-url-regex]: https://github.com/regexps/github-short-url-regex
 [parse-github-short-url]: https://github.com/tunnckoCore/parse-github-short-url
