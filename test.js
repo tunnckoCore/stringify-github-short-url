@@ -60,6 +60,20 @@ describe('stringify-github-short-url:', function() {
       assert.strictEqual(actual, expected);
       done();
     });
+
+    it('and handle it with callback', function(done) {
+      stringify({
+        beta: false,
+        nick: 'test'
+      }, function(err, res) {
+        var actual = res;
+        var expected = '';
+
+        assert.strictEqual(typeof actual, typeof expected);
+        assert.strictEqual(actual, expected);
+        done();
+      });
+    });
   });
 
   describe('should return', function() {
@@ -75,6 +89,7 @@ describe('stringify-github-short-url:', function() {
       });
       var expected = 'tunnckoCore/glob2fp#feature';
 
+      assert.strictEqual(typeof actual, typeof expected);
       assert.strictEqual(actual, expected);
       done();
     });
@@ -91,8 +106,44 @@ describe('stringify-github-short-url:', function() {
       });
       var expected = 'jonschlinkert/kind-of';
 
+      assert.strictEqual(typeof actual, typeof expected);
       assert.strictEqual(actual, expected);
       done();
+    });
+
+    it('and handle them with callback', function(done) {
+      stringify({
+        user: 'jonschlinkert',
+        username: 'jonschlinkert',
+        org: 'jonschlinkert',
+        organization: 'jonschlinkert',
+        repo: 'kind-of',
+        repository: 'kind-of',
+        branch: ''
+      }, function(err, res) {
+        var actual = res;
+        var expected = 'jonschlinkert/kind-of';
+
+        assert.strictEqual(typeof actual, typeof expected);
+        assert.strictEqual(actual, expected);
+
+        stringify({
+          user: 'tunnckoCore',
+          username: 'tunnckoCore',
+          org: 'tunnckoCore',
+          organization: 'tunnckoCore',
+          repo: 'glob2fp',
+          repository: 'glob2fp',
+          branch: 'feature'
+        }, function(err, res) {
+          actual = res;
+          expected = 'tunnckoCore/glob2fp#feature';
+
+          assert.strictEqual(typeof actual, typeof expected);
+          assert.strictEqual(actual, expected);
+          done();
+        });
+      });
     });
   });
 });
