@@ -91,8 +91,6 @@ function stringifyGithubShortUrl(obj, cb) {
   if (obj.user === parsed.user  && obj.repo === parsed.repo) {
     return cb ? cb(null, str) : str;
   }
-
-  return cb ? cb(null, '') : '';
 }
 
 /**
