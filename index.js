@@ -63,30 +63,21 @@ Object.keys(parse).forEach(function(method) {
  *
  * @name stringifyGithubShortUrl
  * @param  {Object} `<obj>` object to stringify
- * @param  {Object} `[opts]` options pass to [github-short-url-regex][github-short-url-regex]
+ * @param  {Function} `[cb]` callback for handle response
  * @return {String}
  * @api public
  */
-function stringifyGithubShortUrl(obj, opts, cb) {
+function stringifyGithubShortUrl(obj, cb) {
   if (!obj) {
-    errs.error('should have at least 1 argument');
-    return;
+    return errs.error('should have at least 1 argument');
   }
-
-  if (typeOf(opts) === 'function') {
-    cb = opts;
-    opts = {};
-  }
-
-  opts = opts || {};
 
   if (typeOf(obj) !== 'object') {
-    errs.type('expect `obj` (1st argument) be object', cb);
-    return;
+    return errs.type('expect `obj` (1st argument) be object', cb);
   }
 
   if (!parse.validate(obj)) {
-    return '';
+    return cb ? cb(null, '') : '';
   }
 
   var str = fmt('%s/%s', obj.user, obj.repo);
@@ -97,8 +88,12 @@ function stringifyGithubShortUrl(obj, opts, cb) {
 
   var parsed = parse(str);
 
-  return obj.user === parsed.user  && obj.repo === parsed.repo ? str : '';
-};
+  if (obj.user === parsed.user  && obj.repo === parsed.repo) {
+    return cb ? cb(null, str) : str;
+  }
+
+  return cb ? cb(null, '') : '';
+}
 
 /**
  * Get correct type of value
