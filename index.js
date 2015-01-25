@@ -8,7 +8,17 @@
 'use strict';
 
 var fmt = require('util').format;
-var _NAME = 'stringify-github-short-url:';
+var parse = require('parse-github-short-url');
+var errs = require('handle-errors')('stringify-github-short-url');
+
+/**
+ * Expose `stringifyGithubShortUrl`
+ */
+module.exports = stringifyGithubShortUrl;
+
+Object.keys(parse).forEach(function(method) {
+  stringifyGithubShortUrl[method] = parse[method];
+})
 
 /**
  * Stringify github short url object
@@ -53,27 +63,41 @@ var _NAME = 'stringify-github-short-url:';
  *
  * @name stringifyGithubShortUrl
  * @param  {Object} `<obj>` object to stringify
+ * @param  {Object} `[opts]` options pass to [github-short-url-regex][github-short-url-regex]
  * @return {String}
  * @api public
  */
-module.exports = function stringifyGithubShortUrl(obj) {
+function stringifyGithubShortUrl(obj, opts, cb) {
   if (!obj) {
-    throw new Error('%s should have at least 1 arguments', _NAME);
+    errs.error('should have at least 1 argument');
+    return;
   }
+
+  if (typeOf(opts) === 'function') {
+    cb = opts;
+    opts = {};
+  }
+
+  opts = opts || {};
 
   if (typeOf(obj) !== 'object') {
-    throw new TypeError('%s expect `obj` be object', _NAME);
+    errs.type('expect `obj` (1st argument) be object', cb);
+    return;
   }
 
-  if (!obj.user) {
+  if (!parse.validate(obj)) {
     return '';
   }
 
+  var str = fmt('%s/%s', obj.user, obj.repo);
+
   if (obj.branch) {
-    return fmt('%s/%s#%s', obj.user, obj.repo, obj.branch);
+    str = fmt('%s#%s', str, obj.branch);
   }
 
-  return fmt('%s/%s', obj.user, obj.repo);
+  var parsed = parse(str);
+
+  return obj.user === parsed.user  && obj.repo === parsed.repo ? str : '';
 };
 
 /**

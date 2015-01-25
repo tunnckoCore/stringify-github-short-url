@@ -43,7 +43,10 @@
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/stringify-github-short-url/blob/master/license.md"
   },
-  "dependencies": {},
+  "dependencies": {
+    "handle-errors": "0.0.0",
+    "parse-github-short-url": "^1.0.3"
+  },
   "devDependencies": {
     "istanbul-harmony": "^0.3.1",
     "mocha": "*",
