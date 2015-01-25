@@ -1,4 +1,4 @@
-## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url]
+## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
 > Stringify github shorthand url object returned from `parse-github-short-url`
 
@@ -13,6 +13,8 @@ npm test
 - [parse-github-short-urls][parse-github-short-urls]
 - [github-short-url-regex][github-short-url-regex]
 - [parse-github-short-url][parse-github-short-url]
+- [hybridify-all][hybridify-all]
+- [hybridify][hybridify]
 
 
 ## API
@@ -107,3 +109,5 @@ _Powered and automated by [kdf](https://github.com/tunnckoCore), January 23, 201
 [github-short-url-regex]: https://github.com/regexps/github-short-url-regex
 [parse-github-short-url]: https://github.com/tunnckoCore/parse-github-short-url
 [parse-github-short-urls]: https://github.com/tunnckoCore/parse-github-short-urls
+[hybridify]: https://github.com/tunnckoCore/hybridify
+[hybridify-all]: https://github.com/tunnckoCore/hybridify-all
