@@ -1,5 +1,9 @@
 
 
+## v1.0.2 / January 28, 2015
+- Release v1.0.2 / npm@v1.0.2
+- bump `handle-errors@^0.0.2`
+
 ## v1.0.1 / January 25, 2015
 - Release v1.0.1 / npm@v1.0.1
 - update readme
