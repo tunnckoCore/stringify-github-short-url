@@ -1,5 +1,11 @@
 
 
+## v1.0.3 / January 28, 2015
+- Release v1.0.3 / npm@v1.0.3
+- bump `parse-github-short-url@~1.0.5`
+- add more tests for exposed methods
+- expose `parse-github-short-url` and his methods
+
 ## v1.0.2 / January 28, 2015
 - Release v1.0.2 / npm@v1.0.2
 - bump `handle-errors@^0.0.2`
