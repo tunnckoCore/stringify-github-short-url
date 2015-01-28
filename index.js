@@ -16,9 +16,13 @@ var errs = require('handle-errors')('stringify-github-short-url');
  */
 module.exports = stringifyGithubShortUrl;
 
+/**
+ * Expose `parse-github-short-url` and his methods
+ */
 Object.keys(parse).forEach(function(method) {
   stringifyGithubShortUrl[method] = parse[method];
-})
+});
+stringifyGithubShortUrl.parse = parse;
 
 /**
  * Stringify github short url object
