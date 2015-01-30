@@ -44,7 +44,7 @@
     "url": "https://github.com/tunnckoCore/stringify-github-short-url/blob/master/license.md"
   },
   "dependencies": {
-    "handle-errors": "^0.0.2",
+    "handle-errors": "~1.0.0",
     "parse-github-short-url": "~1.0.5"
   },
   "devDependencies": {
