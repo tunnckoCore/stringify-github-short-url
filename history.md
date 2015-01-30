@@ -1,5 +1,10 @@
 
 
+## v1.0.4 / January 30, 2015
+- Release v1.0.4 / npm@v1.0.4
+- rebuild readme
+- bump `handle-errors`
+
 ## v1.0.3 / January 28, 2015
 - Release v1.0.3 / npm@v1.0.3
 - bump `parse-github-short-url@~1.0.5`
