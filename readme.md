@@ -3,18 +3,10 @@
 > Stringify github shorthand url object returned from `parse-github-short-url`
 
 ## Install
-```bash
+```
 npm i --save stringify-github-short-url
 npm test
 ```
-
-
-## Related
-- [parse-github-short-urls][parse-github-short-urls]
-- [github-short-url-regex][github-short-url-regex]
-- [parse-github-short-url][parse-github-short-url]
-- [hybridify-all][hybridify-all]
-- [hybridify][hybridify]
 
 
 ## API
@@ -66,6 +58,14 @@ stringifyGithubShortUrl({
 ```
 
 
+## Related
+- [parse-github-short-urls][parse-github-short-urls]
+- [github-short-url-regex][github-short-url-regex]
+- [parse-github-short-url][parse-github-short-url]
+- [hybridify-all][hybridify-all]
+- [hybridify][hybridify]
+
+
 ## Author
 **Charlike Mike Reagent**
 + [gratipay/tunnckoCore][author-gratipay]
@@ -105,7 +105,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 28, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 30, 2015_
 
 [github-short-url-regex]: https://github.com/regexps/github-short-url-regex
 [parse-github-short-url]: https://github.com/tunnckoCore/parse-github-short-url
