@@ -59,11 +59,12 @@ stringifyGithubShortUrl({
 
 
 ## Related
-- [parse-github-short-urls][parse-github-short-urls]
-- [github-short-url-regex][github-short-url-regex]
-- [parse-github-short-url][parse-github-short-url]
-- [hybridify-all][hybridify-all]
-- [hybridify][hybridify]
+* [stringify-github-short-urls](https://github.com/tunnckoCore/stringify-github-short-urls): Stringify an array or object of github shorthand url objects returned from `parse-github-short-url(s)`
+* [parse-github-short-url](https://github.com/tunnckoCore/parse-github-short-url): Parse a string (github shorthand url) into an object with `user`, `repo`, `branch` using the `github-short-url-regex`
+* [github-short-url-regex](https://github.com/regexps/github-short-url-regex): Regular expression (Regex) for matching github shorthand (user/repo#branch).
+* [hybridify](https://github.com/hybridables/hybridify): Building hybrid APIs. You can use both callback and promise in same time.  Like `asyncFn(name, cb).then().catch()`
+* [hybridify-all](https://github.com/hybridables/hybridify-all): Hybridifies all the selected functions in an object.
+
 
 
 ## Author
@@ -105,10 +106,4 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), January 30, 2015_
-
-[github-short-url-regex]: https://github.com/regexps/github-short-url-regex
-[parse-github-short-url]: https://github.com/tunnckoCore/parse-github-short-url
-[parse-github-short-urls]: https://github.com/tunnckoCore/parse-github-short-urls
-[hybridify]: https://github.com/tunnckoCore/hybridify
-[hybridify-all]: https://github.com/tunnckoCore/hybridify-all
+_Powered and automated by [kdf](https://github.com/tunnckoCore), March 26, 2015_
