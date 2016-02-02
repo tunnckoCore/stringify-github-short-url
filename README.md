@@ -45,6 +45,14 @@ gh({
 }) // => 'assemble/assemble-core'
 ```
 
+
+## Related
+- [apidocs-cli](https://github.com/tunnckocore/apidocs-cli): Command-line app for generating API docs from code comments. Can be used as API of `helper-apidocs` package.
+- [gitclone-cli](https://github.com/tunnckocore/gitclone-cli): Git clone github repository with pattern like `user/repo#branch`
+- [parse-github-short-url](https://github.com/tunnckocore/parse-github-short-url): Parse a github/npm shorthand (user/repo#branch or user/repo@version) URL into an object.
+- [parse-github-url](https://github.com/jonschlinkert/parse-github-url): Parse a github URL into an object.
+
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/stringify-github-short-url/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
