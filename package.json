@@ -1,54 +1,24 @@
 {
   "name": "stringify-github-short-url",
-  "version": "2.0.0",
-  "description": "Stringify github shorthand url object returned from `parse-github-short-url`",
+  "version": "0.0.0",
+  "description": "Generate Github / npm shorthand from list of arguments or object.",
+  "repository": "tunnckoCore/stringify-github-short-url",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "lint": "jshint index.js && jscs index.js --reporter inline",
-    "test": "mocha",
-    "test-cov": "istanbul cover _mocha",
-    "test-travis": "istanbul cover _mocha --report lcovonly"
+    "test": "standard && node test.js"
   },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tunnckoCore/stringify-github-short-url.git"
-  },
-  "keywords": [
-    "branch",
-    "gh",
-    "github",
-    "object",
-    "stringify",
-    "regex",
-    "regexps",
-    "release",
-    "repo",
-    "repo-util",
-    "repo-utils",
-    "repos",
-    "short",
-    "shorthand",
-    "tag",
-    "tags",
-    "url",
-    "urls",
-    "util",
-    "utils"
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/stringify-github-short-url/blob/master/license.md"
-  },
-  "dependencies": {
-    "handle-errors": "~1.0.0",
-    "parse-github-short-url": "~2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "istanbul-harmony": "~0.3.1",
-    "mocha": "~2.2.1"
-  }
+    "assertit": "^0.1.0",
+    "pre-commit": "^1.1.2"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "stringify-github-short-url"
+  ]
 }
