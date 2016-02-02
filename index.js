@@ -7,6 +7,36 @@
 
 'use strict'
 
+/**
+ * Generate github / npm shorthand from list
+ * of arguments or object.
+ *
+ * **Example**
+ *
+ * ```js
+ * const gh = require('stringify-github-short-url')
+ *
+ * gh('jonschlinkert', 'micromatch')          // => 'jonschlinkert/micromatch'
+ * gh('jonschlinkert', 'micromatch', 'dev')   // => 'jonschlinkert/micromatch#dev'
+ * gh('gulpjs', 'gulp', 'v3.8.1', true)       // => 'gulpjs/gulp@v3.8.1'
+ * gh({
+ *   owner: 'tunnckoCore',
+ *   name: 'parse-function'
+ * }) // => 'tunnckoCore/parse-function'
+ * gh({
+ *   user: 'assemble',
+ *   repo: 'assemble-core'
+ * }) // => 'assemble/assemble-core'
+ * ```
+ *
+ * @name  stringifyGithubShortUrl
+ * @param  {String|Object} `<owner>` user or org string, or object
+ * @param  {String} `[name]` repo name
+ * @param  {String} `[branch]` branch name
+ * @param  {String} `[npm]` pass `true` if you want to generate npm shorthand
+ * @return {String} generated shorthand
+ * @api public
+ */
 module.exports = function stringifyGithubShortUrl (owner, name, branch, npm) {
   if (owner && typeof owner === 'object') {
     var params = owner

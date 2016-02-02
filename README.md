@@ -18,6 +18,32 @@ npm i stringify-github-short-url --save
 const stringifyGithubShortUrl = require('stringify-github-short-url')
 ```
 
+### [stringifyGithubShortUrl](./index.js#L40)
+> Generate github / npm shorthand from list of arguments or object.
+
+- `<owner>` **{String|Object}** user or org string, or object    
+- `[name]` **{String}** repo name    
+- `[branch]` **{String}** branch name    
+- `[npm]` **{String}** pass `true` if you want to generate npm shorthand    
+- `returns` **{String}** generated shorthand
+
+**Example**
+
+```js
+const gh = require('stringify-github-short-url')
+
+gh('jonschlinkert', 'micromatch')          // => 'jonschlinkert/micromatch'
+gh('jonschlinkert', 'micromatch', 'dev')   // => 'jonschlinkert/micromatch#dev'
+gh('gulpjs', 'gulp', 'v3.8.1', true)       // => 'gulpjs/gulp@v3.8.1'
+gh({
+  owner: 'tunnckoCore',
+  name: 'parse-function'
+}) // => 'tunnckoCore/parse-function'
+gh({
+  user: 'assemble',
+  repo: 'assemble-core'
+}) // => 'assemble/assemble-core'
+```
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/stringify-github-short-url/issues/new).  
