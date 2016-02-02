@@ -1,5 +1,11 @@
 
 
+## 3.0.0 - 2016-02-02
+- Release v3.0.0 / npm@v3.0.0
+- update boilerplate (use `pre-commit`, `gk enable`d, license year, etc stuff)
+- support generate shorthand from list of arguments
+- also accept object with `owner/name/branch` or `user/repo/branch` props
+
 ## 2.0.0 - 2015-03-26
 - Release v2.0.0 / npm@v2.0.0
 - **add** `related` section

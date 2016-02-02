@@ -1,6 +1,6 @@
 {
   "name": "stringify-github-short-url",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Generate Github / npm shorthand from list of arguments or object.",
   "repository": "tunnckoCore/stringify-github-short-url",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
